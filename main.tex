@@ -3,19 +3,19 @@
 % チートシート
 % https://www.cpt.univ-mrs.fr/~masson/latex/Beamer-appearance-cheat-sheet.pdf
 \documentclass[unicode, 14pt, aspectratio=169]{beamer} 
-% \usepackage{minted}
 % \usepackage{listings}
 % \usepackage{enumitem}
 % \usepackage{xcolor}
 % \usepackage{textcomp}
-\usepackage[backend=biber, style=ieee]{biblatex}
+% styleはここで指定できる
+% スタイルの一覧
+% https://www.overleaf.com/learn/latex/Biblatex_bibliography_styles
 \usetheme{rikako}
 \date{\number\year 年\number\month 月\number\day 日}
-% \addbibresource{main.bib}
+\addbibresource{main.bib}
 \title{runcのUNIXプログラミング}
-\author{\texttt{ryotaro612}}
+% \author{\texttt{ryotaro612}} 
 \begin{document}
-\usemintedstyle{titech}
 \begin{frame}[noframenumbering, plain]
 \titlepage
 \end{frame}
@@ -29,8 +29,9 @@
   \frametitle{runc}
 \end{frame}
 \begin{frame}[allowframebreaks,t]
-  \frametitle{参考資料}
+  \frametitle{参考資料}  
   \printbibliography
   % \nocite{*}
 \end{frame}
+
 \end{document}
