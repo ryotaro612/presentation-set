@@ -1,0 +1,36 @@
+% unicodeは、hyperrefへの指定で、pdfのメタデータにあるタイトルの文字化けを防ぐ
+% ptは細かい指定はできないらしい
+% チートシート
+% https://www.cpt.univ-mrs.fr/~masson/latex/Beamer-appearance-cheat-sheet.pdf
+\documentclass[unicode, 14pt, aspectratio=169]{beamer} 
+% \usepackage{minted}
+% \usepackage{listings}
+% \usepackage{enumitem}
+% \usepackage{xcolor}
+% \usepackage{textcomp}
+\usepackage[backend=biber, style=ieee]{biblatex}
+\usetheme{rikako}
+\date{\number\year 年\number\month 月\number\day 日}
+% \addbibresource{main.bib}
+\title{runcのUNIXプログラミング}
+\author{\texttt{ryotaro612}}
+\begin{document}
+\usemintedstyle{titech}
+\begin{frame}[noframenumbering, plain]
+\titlepage
+\end{frame}
+\section{導入}
+% https://fair-use.org/bertrand-russell/the-principles-of-mathematics/s498
+% https://plato.stanford.edu/entries/type-theory/
+% https://people.umass.edu/klement/pom/pom-portrait.pdf
+% https://repository.kulib.kyoto-u.ac.jp/dspace/bitstream/2433/151121/1/ronso38_S49_type.pdf
+% https://www.britannica.com/topic/theory-of-types-logic
+\begin{frame}[t]
+  \frametitle{runc}
+\end{frame}
+\begin{frame}[allowframebreaks,t]
+  \frametitle{参考資料}
+  \printbibliography
+  % \nocite{*}
+\end{frame}
+\end{document}
