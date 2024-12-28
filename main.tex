@@ -7,29 +7,38 @@
 % \usepackage{enumitem}
 % \usepackage{xcolor}
 % \usepackage{textcomp}
-% styleはここで指定できる
-% スタイルの一覧
-% https://www.overleaf.com/learn/latex/Biblatex_bibliography_styles
 \usetheme{titech}
-\date{\number\year 年\number\month 月\number\day 日}
 \addbibresource{main.bib}
+ \date{\number\year 年\number\month 月\number\day 日}
 \title{型理論のはじまり}
 \author{\texttt{ryotaro612}} 
 \begin{document}
+\newcommand\blfootnote[1]{
+    \begingroup
+    \renewcommand\thefootnote{}\footnote{#1}
+    \addtocounter{footnote}{-1}
+    \endgroup
+}
+
 \begin{frame}[noframenumbering, plain]
 \titlepage
 \end{frame}
 \section{導入}
 \begin{frame}
   \frametitle{資料の目的}
-  {\large 型理論に近い分野への関心のきっかけをつくる}
+  {\large 型理論の関連分野に興味もってもらう}
+  \par
+  \vspace{16pt}
+  参考資料の著者が参照される分野
+  \begin{itemize}
+  \item 論理学
+  \item 集合論
+  \item 記号論
+  \item 構造主義
+  \item 哲学、とくに分析哲学
+  \end{itemize}
 \end{frame}
 \section{非ユークリッド幾何学の発見}
-\begin{frame}
-  \frametitle{ギリシアで発展した幾何学}
-  {\large 幾何学は定理を証明することで発展した}
-  定理を演繹で証明して発展させた
-  公理からの演繹
   % タレス、ピタゴラス、プラトンアカデメイア、アリストテレス
   % アルキメデス 有理数
   % 球体
@@ -37,10 +46,36 @@
   % 公準
   % 素朴集合論
   % 双曲平面橋爪
+\begin{frame}
+  \frametitle{ギリシアで発展した幾何学}
+  {\large 幾何学の知識は証明された定理の集積}
+\begin{columns}
+  \begin{column}{0.25\textwidth}  %%<--- here
+    \begin{center}
+      \includegraphics[width=0.8\textwidth]{images/thales.png}
+    \end{center}
+  \end{column}
+  \begin{column}{0.25\textwidth}  %%<--- here
+    \begin{center}
+      \includegraphics[width=0.8\textwidth]{images/plato.png}
+    \end{center}
+  \end{column}
+  \begin{column}{0.25\textwidth}  %%<--- here
+    \begin{center}
+      \includegraphics[width=0.8\textwidth]{images/pythagoras.png}
+    \end{center}
+  \end{column}
+  \begin{column}{0.25\textwidth}  %%<--- here
+    \begin{center}
+      \includegraphics[width=0.8\textwidth]{images/pythagoras2.png}
+    \end{center}
+  \end{column}  
+\end{columns}
+\blfootnote{図は\href{https://www.forbeginnersbooks.com/product-page/philosophy-for-beginners}{Philosophy for beginners}より}
 \end{frame}
 \begin{frame}
   \frametitle{ユークリッドの原論}
-  {\large 原論は、定義、公理、公準、命題、証明を分けた}
+  {\large 幾何学が定義、公理、公準、命題、証明に整理された}
   % ユークリッドはギリシア数学の知識を5つの公準から
 \end{frame}
 \begin{frame}
@@ -110,9 +145,9 @@
 % https://repository.kulib.kyoto-u.ac.jp/dspace/bitstream/2433/151121/1/ronso38_S49_type.pdf
 % https://www.britannica.com/topic/theory-of-types-logic
 \begin{frame}[allowframebreaks,t]
-  \frametitle{参考資料}  
+  \frametitle{参考資料}
   \printbibliography
-  % \nocite{*}
+  \nocite{*}
 \end{frame}
 
 \end{document}
