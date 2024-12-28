@@ -6,11 +6,20 @@
     \large{\insertframetitle}
   \end{beamercolorbox}
 }
+
 % ページをまたぐ場合に、表題の末尾にインデックスをつけない
 \setbeamertemplate{frametitle continuation}{}
+
 % footlineはouter
 % https://www.beamer.plus/Inner-Themes-Outer-Themes-Templates.html
 \setbeamertemplate{footline}{
+  \usebeamercolor[highlight]{page number in head/foot}  
   \hfill\insertframenumber\hspace{0.05\paperwidth}
   \vspace{0.025\paperheight}
 }
+% \usebeamercolor[highlight]{page number in head/foot}
+% \beamertemplatenavigationsymbolsempty
+% set a bigger font for the page number
+% \setbeamerfont{page number in head/foot}{fg=highlight}
+% print only the frame number in the footline
+% \setbeamertemplate{footline}[frame number]
