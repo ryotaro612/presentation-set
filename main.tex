@@ -7,19 +7,21 @@
 % \usepackage{enumitem}
 % \usepackage{xcolor}
 % \usepackage{textcomp}
+\usepackage{bussproofs}
 \usetheme{titech}
 \addbibresource{main.bib}
  \date{\number\year 年\number\month 月\number\day 日}
 \title{型理論のはじまり}
-\author{\texttt{ryotaro612}} 
-\begin{document}
-\newcommand\blfootnote[1]{
-    \begingroup
-    \renewcommand\thefootnote{}\footnote{#1}
-    \addtocounter{footnote}{-1}
-    \endgroup
+\author{\texttt{ryotaro612}}
+
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
 }
 
+\begin{document}
 \begin{frame}[noframenumbering, plain]
 \titlepage
 \end{frame}
@@ -39,33 +41,26 @@
   \end{itemize}
 \end{frame}
 \section{幾何学}
-  % タレス、ピタゴラス、プラトンアカデメイア、アリストテレス
-  % アルキメデス 有理数
-  % 球体
-  % ロバチェフスキー
-  % 公準
-  % 素朴集合論
-  % 双曲平面橋爪
 \begin{frame}
   \frametitle{ギリシアで発展した幾何学}
   {\large 幾何学の知識は証明された定理の集積}
 \begin{columns}
-  \begin{column}{0.25\textwidth}  %%<--- here
+  \begin{column}{0.25\textwidth}
     \begin{center}
       \includegraphics[width=0.8\textwidth]{images/thales.png}
     \end{center}
   \end{column}
-  \begin{column}{0.25\textwidth}  %%<--- here
+  \begin{column}{0.25\textwidth}
     \begin{center}
       \includegraphics[width=0.8\textwidth]{images/plato.png}
     \end{center}
   \end{column}
-  \begin{column}{0.25\textwidth}  %%<--- here
+  \begin{column}{0.25\textwidth}
     \begin{center}
       \includegraphics[width=0.8\textwidth]{images/pythagoras.png}
     \end{center}
   \end{column}
-  \begin{column}{0.25\textwidth}  %%<--- here
+  \begin{column}{0.25\textwidth}
     \begin{center}
       \includegraphics[width=0.8\textwidth]{images/pythagoras2.png}
     \end{center}
@@ -223,9 +218,12 @@
   {\large ブールは命題に出現する個体の集合を記号で表した}
   \begin{columns}
     \begin{column}{0.7\textwidth}
-      \begin{quotation}
-         Let us then agree to represent the class of individuals to which a particular name or description is applicable, by a single letter, as x. If the name is “men,” for instance, let x represent “all men,”
-      \end{quotation}
+      \begin{center}
+        THE LAWS OF THOUGHT\supercite{bool}
+        \begin{quotation}
+          Let us then agree to represent the class of individuals to which a particular name or description is applicable, by a single letter, as x. If the name is “men,” for instance, let x represent “all men,”
+        \end{quotation}
+      \end{center}
     \end{column}    
     \begin{column}{0.2\textwidth}
       \begin{figure}
@@ -235,10 +233,38 @@
   \end{columns}
   \blfootnote{図は``The Universal Computer: The Road from Leibniz to Turing''より}
 \end{frame}
-\begin{frame}
-  \frametitle{推論規則の例}
-  {\large 命題論理は、命題と論理結合子からなる論理体系}
-\end{frame}
+% \begin{frame}
+%   \frametitle{推論規則の例}
+%   {\large 命題論理は、命題と論理結合子からなる論理体系}
+
+  % \AxiomC{$\varphi, \psi$}
+  % \RightLabel{(\wedge 導入)}
+  % \UnaryInfC{$\varphi\wedge\psi$}
+  % \DisplayProof
+  % \AxiomC{$\varphi\wedge\psi$}
+  % \RightLabel{(\vee 消去)}
+  % \UnaryInfC{$\varphi$}
+  % \DisplayProof
+  % \AxiomC{$\varphi\wedge\psi$}
+  % \RightLabel{(\vee 消去)}
+  % \UnaryInfC{$\psi$}
+  % \DisplayProof
+  % \AxiomC{$[\varphi]$}
+  % \noLine
+  % \UnaryInfC{$\vdots$}
+  % \noLine
+  % \UnaryInfC{$\psi$}
+  % \RightLabel{(\rightarrow 導入)}
+  % \UnaryInfC{\varphi\rightarrow\psi}
+  % \DisplayProof
+  
+  % \RightLabel{(\rightarrow I)}
+% \UnaryInfC{$\varphi\rightarrow\psi$}
+% \AxiomC{$\psi$}
+% \RightLabel{(\rightarrow 導入)}
+% \UnaryInfC{$\varphi\rightarrow\psi$}
+
+% \end{frame}
 \begin{frame}
   \frametitle{概念記法}
   {\large フレーゲは述語の言明を形式化した}
@@ -250,7 +276,6 @@
 \begin{frame}
   \frametitle{型の概念}
   ラッセルの自分自身に言明する述語の例に対して、フレーゲは述語は述語を引数にとれないと回答した
-
   ただし述語の外延が作用する
 \end{frame}
 % https://fair-use.org/bertrand-russell/the-principles-of-mathematics/s498
