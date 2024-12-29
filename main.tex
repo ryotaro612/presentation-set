@@ -233,41 +233,72 @@
   \end{columns}
   \blfootnote{図は``The Universal Computer: The Road from Leibniz to Turing''より}
 \end{frame}
-% \begin{frame}
-%   \frametitle{推論規則の例}
-%   {\large 命題論理は、命題と論理結合子からなる論理体系}
-
-  % \AxiomC{$\varphi, \psi$}
-  % \RightLabel{(\wedge 導入)}
-  % \UnaryInfC{$\varphi\wedge\psi$}
-  % \DisplayProof
-  % \AxiomC{$\varphi\wedge\psi$}
-  % \RightLabel{(\vee 消去)}
-  % \UnaryInfC{$\varphi$}
-  % \DisplayProof
-  % \AxiomC{$\varphi\wedge\psi$}
-  % \RightLabel{(\vee 消去)}
-  % \UnaryInfC{$\psi$}
-  % \DisplayProof
-  % \AxiomC{$[\varphi]$}
-  % \noLine
-  % \UnaryInfC{$\vdots$}
-  % \noLine
-  % \UnaryInfC{$\psi$}
-  % \RightLabel{(\rightarrow 導入)}
-  % \UnaryInfC{\varphi\rightarrow\psi}
-  % \DisplayProof
-  
-  % \RightLabel{(\rightarrow I)}
-% \UnaryInfC{$\varphi\rightarrow\psi$}
-% \AxiomC{$\psi$}
-% \RightLabel{(\rightarrow 導入)}
-% \UnaryInfC{$\varphi\rightarrow\psi$}
-
-% \end{frame}
+\begin{frame}
+  \frametitle{推論規則の例}
+  {\large 命題論理は、命題と論理結合子からなる論理体系}
+  \par
+  推論規則
+  \par
+  \vspace{16pt}
+  \AxiomC{$\varphi, \psi$}
+  \RightLabel{(\wedge 導入)}
+  \UnaryInfC{$\varphi\wedge\psi$}
+  \DisplayProof
+  \AxiomC{$\varphi\wedge\psi$}
+  \RightLabel{(\vee 消去)}
+  \UnaryInfC{$\varphi$}
+  \DisplayProof
+  \AxiomC{$\varphi\wedge\psi$}
+  \RightLabel{(\vee 消去)}
+  \UnaryInfC{$\psi$}
+  \DisplayProof
+  \AxiomC{$[\varphi]$}
+  \noLine
+  \UnaryInfC{$\vdots$}
+  \noLine
+  \UnaryInfC{$\psi$}
+  \RightLabel{(\rightarrow 導入)}  
+  \UnaryInfC{$\varphi\rightarrow\psi$}
+  \DisplayProof
+  \AxiomC{$\varphi$}
+  \AxiomC{$\varphi\rightarrow\psi$}
+  \RightLabel{(\rightarrow 消去)}  
+  \BinaryInfC{$\psi$}
+  \DisplayProof
+  \AxiomC{$\bot$}
+  \RightLabel{($\bot$)}
+  \UnaryInfC{$\varphi$}
+  \DisplayProof
+  \AxiomC{$[\neg\varphi]$}
+  \noLine
+  \UnaryInfC{$\vdots$}
+  \noLine
+  \UnaryInfC{$\bot$}
+  \RightLabel{(RAA)}
+  \UnaryInfC{$\varphi$}
+  \DisplayProof  
+\end{frame}
 \begin{frame}
   \frametitle{概念記法}
   {\large フレーゲは述語の言明を形式化した}
+  \begin{itemize}
+  \item 「$\varphi$が〜である」言明を、引数$\varphi$を真偽値に写像する述語$P(\varphi)$を命題論理に加える
+  \item 「任意の$\phi$について」という普遍量化子$\forall$と、「ある$x$について」という存在量化子$\exists$も加える
+  \item たとえば「家にいるペットは犬か猫だ」という命題は$\forall x. P(x) \rightarrow D(x)\vee C(x)$のように表せる
+  \end{itemize}
+  % \AxiomC{$A[t]$}
+  % \RightLabel{(\forall 導入)}
+  % \UnaryInfC{$\forall x A[x]$}
+  % \DisplayProof
+  % \AxiomC{$\forall x A[x]$}
+  % \RightLabel{(\forall 消去)}
+  % \UnaryInfC{$A[t]$}
+  % \DisplayProof
+  % \AxiomC{$A[t]$}
+  % \RightLabel{(\exists 消去)}
+  % \UnaryInfC{$\exists A[x]$}
+  % \DisplayProof
+  
 \end{frame}
 \begin{frame}
   \frametitle{ラッセルのパラドクス}
