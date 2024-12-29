@@ -38,7 +38,7 @@
   \item 哲学、とくに分析哲学
   \end{itemize}
 \end{frame}
-\section{非ユークリッド幾何学の発見}
+\section{幾何学}
   % タレス、ピタゴラス、プラトンアカデメイア、アリストテレス
   % アルキメデス 有理数
   % 球体
@@ -144,12 +144,12 @@
   \item 大円はユークリッド幾何学の直線にあたる
   \end{itemize}
 \end{frame}
-\section{素朴な集合論と記号論理学}
+\section{素朴な集合論}
 \begin{frame}
   \frametitle{非ユークリッド幾何学の影響}
   {\large 正しさは仮定した公理から作りだすもの}
   \begin{itemize}
-  \item 空間をふくめた数学の対象は公理から構築するものになる
+  \item 空間をふくめた数学の対象は公理から構築するものにかわる
   \item ユークリッド幾何学が正しいと思えるのは素朴な知覚の認識に合うから
     \begin{itemize}
     \item 原論の直線や平面の定義はあいまい
@@ -159,15 +159,64 @@
 \end{frame}
 \begin{frame}
   \frametitle{ものの集まりで数学を考える}
-  {\large いろんな数学の概念を集合で定義できる}
+  {\large 空集合から出発して対象を集合で定義できる}
+  \begin{enumerate}
+  \item 空集合$\phi$を$\{x|x\neq x\}$とする
+  \item $\phi$を$0$となづける
+  \item 空集合1つからなる集合$\{\phi\}$を$1$となづける
+  \item $\{0, 1\}$を$2$となづける
+  \item $\vdots$
+  \item $\{0, 1, 2, \cdots\}$を$\omega$となづける
+  \item $\omega$の積集合$P(\omega)$を実数全体の集合にする
+  \item $P(P(\omega))$を実数から実数への関数の集合にする
+  \end{enumerate}
 \end{frame}
+\section{記号論理学}
 \begin{frame}
   \frametitle{算術の基礎}
-  {\large フレーゲは記号論理学と集合論による自然数の公理と定理の提供を試みた}
+  {\large フレーゲは記号論理学と集合論で自然数の公理と定理の構築を試みた}
+  \begin{columns}
+    \begin{column}{0.8\textwidth}
+      \begin{itemize}
+      \item 概念記法(Begriffsschrift, 1879)で述語論理を提案
+      \item 語にはsenseとreferenceがあると提起
+        \begin{itemize}
+        \item 明けの明星と宵の明星のreferenceは金星
+        \item 「金星は明けの明星である」と「金星は金星である」のsenseは違う
+        \end{itemize}
+      \end{itemize}
+    \end{column}    
+    \begin{column}{0.2\textwidth}
+      \begin{figure}
+        \includegraphics[width=1\textwidth]{images/frege.png}
+      \end{figure}       
+    \end{column} 
+  \end{columns}
+  \blfootnote{図はPhilosophy for beginners\supercite{philosophy-for-begginers}より}
 \end{frame}
 \begin{frame}
-  \frametitle{思考を計算するための記号}
-  {\large 推論の規則を記号を操作する計算に還元する考えは世紀以前からある}
+  \frametitle{思考を記号で計算する}
+  {\large 推論を記号操作に還元する考えは17世紀以前からある}
+  \begin{columns}
+    \begin{column}{0.6\textwidth}
+      \begin{itemize}
+        \item 今日で使う微積分学の記法を発明        
+        \item 二進数を発明
+        \item characteristica universalis
+          \begin{itemize}
+          \item 単語を構成するアルファベットのような思考の記号体系
+          \item 代数的な記号操作で推論
+          \end{itemize}
+      \end{itemize}
+    \end{column}    
+    \begin{column}{0.4\textwidth}
+      \begin{figure}
+        \includegraphics[width=0.7\linewidth]{images/leibniz.png}
+        \includegraphics[width=0.7\linewidth]{images/universal.png}
+      \end{figure}       
+    \end{column} 
+  \end{columns}
+  \blfootnote{図はPhilosophy for beginners\supercite{philosophy-for-begginers}より}  
 \end{frame}
 \begin{frame}
   \frametitle{ブールの論理代数}
