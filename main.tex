@@ -28,7 +28,7 @@
 \section{導入}
 \begin{frame}
   \frametitle{資料の目的}
-  {\large 型理論の関連分野に興味もってもらう}
+  {\large 型理論に関わる分野の紹介}
   \par
   \vspace{16pt}
   参考資料が関係する分野
@@ -169,11 +169,12 @@
 \section{記号論理学}
 \begin{frame}
   \frametitle{算術の基礎}
-  {\large フレーゲは記号論理学と集合論で自然数の公理と定理の構築を試みた}
+  {\large フレーゲは論理学を算術の基礎におこうとした}
   \begin{columns}
     \begin{column}{0.8\textwidth}
       \begin{itemize}
-      \item 概念記法(Begriffsschrift, 1879)で述語論理を提案
+      \item 「概念記法(Begriffsschrift)」で述語論理を提案
+      \item 「算術の基本法則」で概念記法と集合論による算術の公理と定理を提案
       \item 語にはsenseとreferenceがあると提起
         \begin{itemize}
         \item 明けの明星と宵の明星のreferenceは金星
@@ -191,12 +192,13 @@
 \end{frame}
 \begin{frame}
   \frametitle{思考を記号で計算する}
-  {\large 推論を記号操作に還元する考えは17世紀以前からある}
+  {\large 推論を記号操作に還元する考えは17世紀以前からある}  
   \begin{columns}
-    \begin{column}{0.6\textwidth}
+    \begin{column}{0.55\textwidth}
+      考案したもの
       \begin{itemize}
-        \item 今日で使う微積分学の記法を発明        
-        \item 二進数を発明
+        \item 今日で使う微積分学の記法
+        \item 二進数
         \item characteristica universalis
           \begin{itemize}
           \item 単語を構成するアルファベットのような思考の記号体系
@@ -219,7 +221,7 @@
   \begin{columns}
     \begin{column}{0.7\textwidth}
       \begin{center}
-        THE LAWS OF THOUGHT\supercite{bool}
+        THE LAWS OF THOUGHT\supercite{bool}より引用
         \begin{quotation}
           Let us then agree to represent the class of individuals to which a particular name or description is applicable, by a single letter, as x. If the name is “men,” for instance, let x represent “all men,”
         \end{quotation}
@@ -274,7 +276,7 @@
   \UnaryInfC{$\vdots$}
   \noLine
   \UnaryInfC{$\bot$}
-  \RightLabel{(RAA)}
+  \RightLabel{(背理法)}
   \UnaryInfC{$\varphi$}
   \DisplayProof  
 \end{frame}
@@ -285,6 +287,7 @@
   \item 「$\varphi$が〜である」言明を、引数$\varphi$を真偽値に写像する述語$P(\varphi)$を命題論理に加える
   \item 「任意の$\phi$について」という普遍量化子$\forall$と、「ある$x$について」という存在量化子$\exists$も加える
   \item たとえば「家にいるペットは犬か猫だ」という命題は$\forall x. P(x) \rightarrow D(x)\vee C(x)$のように表せる
+  \item 複雑な命題を単純な命題の組合せで表現しやすくなる
   \end{itemize}
   % \AxiomC{$A[t]$}
   % \RightLabel{(\forall 導入)}
@@ -303,6 +306,24 @@
 \begin{frame}
   \frametitle{ラッセルのパラドクス}
   {\large 集合の集合を考えると矛盾がおきる}
+  \begin{itemize}
+  \item ラッセルのパラドクス
+    \begin{enumerate}
+    \item 自分自身を元にもたない集合すべての集合を$R=\{x|x\notin x \}$とする
+    \item $R$が自分を元にもたない集合とすると、定義から$R$は$R$の元になる
+    \item $R$が自分を元にもつ集合とすると、定義から$R$は$R$の元ではない
+    \end{enumerate}
+  \item 算術の基本法則では、第五公理$\epsilon P=\epsilon Q \equiv \forall x [P(x)\equiv Q(x)]$がパラドクスを招く
+    \begin{itemize}
+    \item 公理は述語の同一である条件
+    \item $\epsilon P$は述語$P$を充足する集合
+    \end{itemize}
+      \begin{enumerate}
+    \item $R$を述語論理で$\exists P[x=\epsilon P\wedge \neg P(x)]$と表せる
+    \item $x$を$\epsilon R$とすると$R(\epsilon R)\equiv\neg R(\epsilon R)$となる
+    \end{enumerate}
+  \item ラッセルが述語論理の述語は述語をとれない規則のような階層構造でパラドクスの解消を試みたのが型理論のはじまり
+  \end{itemize}
 \end{frame}
 \begin{frame}
   \frametitle{型の概念}
