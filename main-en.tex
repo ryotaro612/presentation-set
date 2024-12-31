@@ -1,9 +1,10 @@
+
 \documentclass[unicode, 14pt, aspectratio=169]{beamer}
 \usepackage{bussproofs}
 \usepackage{listings}
 \usetheme{titechen}
 \addbibresource{main.bib}
- \date{\today}
+\date{\today}
 \title{The Origins of Type Theory}
 \author{\texttt{ryotaro612}}
 \newcommand\blfootnote[1]{%
@@ -20,10 +21,10 @@
 \section{Introduction}
 \begin{frame}
   \frametitle{Objective}
-  {\large Introduction to fields related to the theory of types}
+  {\large An introduction to areas related to type theory}
   \par
   \vspace{16pt}
-  Fields related to the references of this slides
+  Fields relevant to this presentation:
   \begin{itemize}
   \item Logic
   \item Set theory
@@ -32,10 +33,10 @@
   \item Philosophy of language
   \end{itemize}
 \end{frame}
-\section{Non-euclidean geometry}
+\section{Non-Euclidean Geometry}
 \begin{frame}
-  \frametitle{Geometry in ancient Greece}
-  {\large The approach to develop Geometry in ancient Greece was deductive reasoning.}
+  \frametitle{Geometry in Ancient Greece}
+  {\large Geometry in ancient Greece was developed using deductive reasoning.}
 \begin{columns}
   \begin{column}{0.25\textwidth}
     \begin{center}
@@ -58,7 +59,7 @@
     \end{center}
   \end{column}  
 \end{columns}
-\blfootnote{Images adapted from Philosophy for beginners\supercite{philosophy-for-begginers}}
+\blfootnote{Images adapted from ``Philosophy for Beginners''\supercite{philosophy-for-begginers}}
 \end{frame}
 \begin{frame}
   \frametitle{Euclid's Elements}
@@ -66,14 +67,14 @@
   \par
   \vspace{16pt}
   \begin{description}[leftmargin=0cm]
-  \item[Definition 1] A point is that of which there is no part.
-  \item[Definition 2] A line is a length without breadth.
+  \item[Definition 1] A point is that which has no part.
+  \item[Definition 2] A line is length without breadth.    
   \item[Definition 3] A surface is that which has length and breadth only.
   \item[Axiom 5] The whole is greater than the part.
   \end{description}
 \end{frame}
 \begin{frame}
-  \frametitle{Euclid's postulates}
+  \frametitle{Euclid's Postulates}
   {\large The fifth postulate never seemed self-evident.}
   \par
   {\footnotesize
@@ -87,72 +88,71 @@
   }
 \end{frame}
 \begin{frame}
-  \frametitle{The fifth postulate is known as the parallel postulate.}
-  {\large Given a straight line and a point not on that line, there is exactly one straight line parallel to the original line that passes through the given point.}
+  \frametitle{The Fifth Postulate: The Parallel Postulate}
+  {\large Given a line and a point not on it, there is exactly one line parallel to the original line passing through the point.}
   \blfootnote{Figure adapted from 「数学の世界史」\supercite{suugaku-no-sekaishi}}
   \begin{figure}
     \includegraphics[width=0.6\textwidth]{images/axiom5.png}
-    \caption{A parallel line and a point $p$ not on that line}
+    \caption{A parallel line and a point $p$ not on the line}
   \end{figure}
 \end{frame}
 \begin{frame}
-  \frametitle{Investigations of the parallel postulate}
+  \frametitle{Investigations of the Parallel Postulate}
   \begin{itemize}
-  \item Many attempts were made to derive the parallel postulate using the rest of the other postulates.
+  \item Numerous attempts were made to derive the parallel postulate using the other postulates.
     \begin{itemize}
-    \item Investigations were made by Alhazen (965-1039) and Khayyam (1048–1131).
+    \item Alhazen (965-1039) and Khayyam (1048–1131) explored these investigations.
     \item The Saccheri-Legendre Theorem states that if the parallel postulate is not assumed, then the sum of the angles of a triangle is less than or equal to 180 degrees.
     \end{itemize}
-  \item The negation of the parallel postulate leads to no contradiction with the other postulates.
+  \item The negation of the parallel postulate does not result in a contradiction with the other postulates.
     \begin{itemize}
-      \item Lobachevsky (1792-1856), along with János Bolyai (1802-1860), independently proposed a system where many parallels exist, leading to no contradictions within the geometry itself.
+      \item Lobachevsky (1792-1856) and János Bolyai (1802-1860) independently proposed a system in which multiple parallels exist, leading to a consistent geometry.
     \end{itemize}
   \end{itemize}
 \end{frame}
 \begin{frame}
-  \frametitle{Non-Euclidean geometries}
-  {\large For instance, in spherical geometry, great circles on a sphere intersect at exactly two points.}
+  \frametitle{Non-Euclidean Geometries}
+  {\large In spherical geometry, for example, great circles intersect at exactly two points.}
   \blfootnote{Figure adapted from "はじめての構造主義"\supercite{structure}}
   \begin{figure}
     \includegraphics[width=0.4\textwidth]{images/non-euclid.png}
-    \caption{Spherical space and hyperbolic space}
+    \caption{Spherical and hyperbolic spaces}
   \end{figure}
   In spherical geometry, a great circle corresponds to a straight line in Euclidean geometry.
 \end{frame}
-\section{Naive set theory}
+\section{Naive Set Theory}
 \begin{frame}
-  \frametitle{The development of set theory}
-  {\large The discovery of non-Euclidean geometry inspired a rethinking of mathematical foundations}
+  \frametitle{Development of Set Theory}
+  {\large The discovery of non-Euclidean geometry inspired a rethinking of mathematical foundations.}
   \begin{itemize}
-  \item The discovery led mathematicians to have the idea that mathematics could be constructed on various axiom systems.
-  \item Georg Cantor developed set theory as a foundational framework for mathematics, providing a unified approach to handle different mathematical concepts. 
+  \item This discovery led mathematicians to realize that mathematics could be constructed on various axiom systems.
+  \item Georg Cantor developed set theory as a foundational framework, providing a unified way to handle different mathematical concepts.
   \end{itemize}
 \end{frame}
 \begin{frame}
-  \frametitle{A unified approach}
-  {\large A sketch of how to constrcut mathematical concepts using only the emtpy set.}
+  \frametitle{A Unified Approach}
+  {\large A sketch of how to constrcut mathematical concepts using only the empty set.}
   \par
   \begin{enumerate}
-  \item Begin with the empty set, denoted by $\emptyset$, $\{x|x\neq x\}$.
+  \item Begin with the empty set, denoted by $\emptyset = \{x|x\neq x\}$.
   \item Define the successor function $ S(n) = n \cup \{n\} $, which essentially adds one to a number by creating a new set.    
   \item Define $\emptyset$ as 0: $ 0 = \emptyset$.
   \item 1 is defined as $S(0) = \{ \emptyset \}$.
-  \item 2 as $S(1) = \{ \emptyset, \{ \emptyset \} \}$.
-  \item Continue this process to generate all natural numbers.    
+  \item 2 is $S(1) = \{ \emptyset, \{ \emptyset \} \}$.
+  \item Continue this process to generate all natural numbers.
   \end{enumerate}
 \end{frame}
-\section{Mathematical logic}
+\section{Mathematical Logic}
 \begin{frame}
   \frametitle{Logicism}
-  {\large Frege developed predicate logic and employed it and set theory to provide a logical basis for arithmetic.}
+  {\large Frege developed predicate logic and used it along with set theory to provide a logical basis for arithmetic.}
   \begin{columns}
     \begin{column}{0.8\textwidth}
       \begin{itemize}
-        \item In "The Foundations of Arithmetic," Frege aimed to show that the truths of arithmetic are derived from logical axioms.
+      \item In "The Foundations of Arithmetic," Frege aimed to show that arithmetic truths are derived from logical axioms.
       \item In "On Sense and Reference," Frege distinguished between sense and reference.
         \begin{itemize}
-        \item The terms "Morning Star" and "Evening Star" have different senses but share the same reference.
-        % \item This distinction helps explain how different expressions can convey different cognitive values while referring to the same object.
+        \item Terms "Morning Star" and "Evening Star" have different senses but share the same reference.
         \end{itemize}
       \end{itemize}
     \end{column}    
@@ -162,12 +162,12 @@
       \end{figure}       
     \end{column} 
   \end{columns}
-  \blfootnote{Figure adapted from Philosophy for beginners\supercite{philosophy-for-begginers}}
+  \blfootnote{Figure adapted from Philosophy for Beginners\supercite{philosophy-for-begginers}}
 \end{frame}
 
 \begin{frame}
   \frametitle{Leibniz's pioneering work in symbolic manipulation}
-  {\large The approach to calculate inference by manipulating symbols was already explored in the 17th century.}  
+  {\large The symbolic calculation of inferences was explored even in the 17th century.}
   \begin{columns}
     \begin{column}{0.55\textwidth}
       {\setlength{\leftmargini}{0.05\paperwidth}
@@ -175,9 +175,9 @@
       \begin{itemize}
         \item Calculus derivatives
         \item The binary number system
-        \item characteristica universalis
+        \item Characteristica universalis
           \begin{itemize}
-          \item a universal system of signs to eliminate the ambiguity of natural nlanguage by developing an alphabet of human thoughts
+          \item A universal system of signs aimed at eliminating natural language ambiguity by developing an "alphabet of human thoughts"
           \end{itemize}
         \end{itemize}
       }
@@ -189,7 +189,7 @@
       \end{figure}
     \end{column} 
   \end{columns}
-  \blfootnote{Figures adapted from Philosophy for beginners\supercite{philosophy-for-begginers}}  
+  \blfootnote{Figures adapted from Philosophy for Beginners\supercite{philosophy-for-begginers}}  
 \end{frame}
 \begin{frame}
   \frametitle{Boole Turned Logic into Algebra}
@@ -256,16 +256,16 @@
   \DisplayProof
   }
   \par
-  a proposition is a declarative statement that is either true or false but not both.
+  A proposition is a declarative statement that is either true or false, but not both.
 \end{frame}
 \begin{frame}
   \frametitle{Conceptual Notation}
-  {\large Frege formalized statements with predicates.}
+  {\large Frege formalized statements using predicates.}
   \begin{itemize}
-  \item Statements like “$\varphi$ is ~” are represented by predicates $P(\varphi)$ that map argument $\varphi$ to truth values, added to propositional logic.
-  \item Also adds the universal quantifier $\forall$ for “for any $\phi$,” and the existential quantifier $\exists$ for “there exists $x$.”
-  \item For instance, the statement “Pets at home are either dogs or cats” is represented as $\forall x. P(x) \rightarrow D(x) \vee C(x)$.
-  \item Complex propositions can be easily expressed as combinations of simpler ones.
+ \item Statements such as “$\varphi$ is ~” are represented by predicates $P(\varphi)$, mapping an argument $\varphi$ to truth values, and extending propositional logic.
+ \item Introduces the universal quantifier $\forall$ meaning “for any $\phi$,” and the existential quantifier $\exists$ meaning “there exists $x$.”
+ \item For example, the statement “Pets at home are either dogs or cats” is represented as $\forall x. P(x) \rightarrow D(x) \vee C(x)$.
+ \item Complex propositions can be expressed as combinations of simpler ones.    
   \end{itemize} 
 \end{frame}
 \begin{frame}
@@ -278,12 +278,12 @@
   \end{enumerate}  
 \end{frame}
 \begin{frame}
-  \frametitle{Russell's Paradox in ``Foundations of Arithmetic''}
+  \frametitle{Russell's Paradox in "Foundations of Arithmetic"}
   {\large Axiom V, $\epsilon P=\epsilon Q \equiv \forall x [P(x)\equiv Q(x)]$, leads to contradiction.}
   \begin{itemize}
-  \item $\epsilon P$ represents the set of elements satisfying predicate $P$.
+  \item $\epsilon P$ denotes the set of elements satisfying predicate $P$.
   \item $R$ can be expressed as $\exists P [x = \epsilon P \wedge \neg P(x)]$ in predicate logic.
-  \item Substituting $x$ as $\epsilon R$, we obtain $R(\epsilon R) \equiv \neg R(\epsilon R)$.    
+  \item Substituting $x$ as $\epsilon R$, we find $R(\epsilon R) \equiv \neg R(\epsilon R)$.    
   \item In Frege's work, there is a distinction between objects, predicates, and predicates of predicates. This hierarchy can be seen as an early notion of type theory.
   \end{itemize}
 \end{frame}
