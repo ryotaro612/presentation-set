@@ -120,59 +120,51 @@
   \end{figure}
   In spherical geometry, a great circle corresponds to a straight line in Euclidean geometry.
 \end{frame}
-% \section{Naive Set Theory}
-% \begin{frame}
-%   \frametitle{Impact of Non-Euclidean Geometry}
-%   {\large Correctness is based on the axioms assumed.}
-%   \begin{itemize}
-%   \item Mathematical objects, including space, are constructed from axioms.
-%     \begin{itemize}
-%     \item Euclidean geometry feels correct because it aligns with naive visual experience.
-%     \item Definitions of lines and planes in "Elements" are vague.
-%     \end{itemize}
-%   \item \textcolor{highlight}{Set theory} was established by Dedekind and Cantor as a tool to define mathematical objects.
-%   \end{itemize}
-% \end{frame}
-% \begin{frame}
-%   \frametitle{Thinking of Mathematics as Collections of Objects}
-%   {\large Everything can be defined using the empty set.}
-%   \par
-%   Example
-%   \begin{enumerate}
-%   \item Define the empty set $\phi$ as $\{x|x\neq x\}$.
-%   \item Name $\phi$ as $0$.
-%   \item The set containing a single empty set $\{\phi\}$ is named $1$.
-%   \item Name $\{0, 1\}$ as $2$.
-%   \item $\vdots$
-%   \item Name $\{0, 1, 2, \cdots\}$ as $\omega$.
-%   \item Make the power set of $\omega$, $P(\omega)$, the set of real numbers.
-%   \item Make $P(P(\omega))$ the set of functions from real numbers to real numbers.
-%   \end{enumerate}
-% \end{frame}
-% \section{Symbolic Logic}
-% \begin{frame}
-%   \frametitle{Foundation of Arithmetic}
-%   {\large Frege attempted to base arithmetic on logic.}
-%   \begin{columns}
-%     \begin{column}{0.8\textwidth}
-%       \begin{itemize}
-%       \item Proposed \textcolor{highlight}{predicate logic} in "Conceptual Notation."
-%       \item Suggested axioms and theorems of arithmetic via conceptual notation and set theory in "The Basic Laws of Arithmetic."
-%       \item In "On Sense and Reference," posited that words have both a sense and a reference.
-%         \begin{itemize}
-%         \item The reference of the "morning star" and "evening star" is Venus.
-%         \item The sense of "Venus is the morning star" differs from "Venus is Venus."
-%         \end{itemize}
-%       \end{itemize}
-%     \end{column}    
-%     \begin{column}{0.2\textwidth}
-%       \begin{figure}
-%         \includegraphics[width=1\textwidth]{images/frege.png}
-%       \end{figure}       
-%     \end{column} 
-%   \end{columns}
-%   \blfootnote{Figures from Philosophy for beginners\supercite{philosophy-for-begginers}}
-% \end{frame}
+\section{Naive set theory}
+\begin{frame}
+  \frametitle{The development of set theory}
+  {\large The discovery of non-Euclidean geometry inspired a rethinking of mathematical foundations}
+  \begin{itemize}
+  \item The discovery led mathematicians to have the idea that mathematics could be constructed on various axiom systems.
+  \item Georg Cantor developed set theory as a foundational framework for mathematics, providing a unified approach to handle different mathematical concepts. 
+  \end{itemize}
+\end{frame}
+\begin{frame}
+  \frametitle{A unified approach}
+  {\large A sketch of how to constrcut mathematical concepts using only the emtpy set.}
+  \par
+  \begin{enumerate}
+  \item Begin with the empty set, denoted by $\emptyset$, $\{x|x\neq x\}$.
+  \item Define the successor function $ S(n) = n \cup \{n\} $, which essentially adds one to a number by creating a new set.    
+  \item Define $\emptyset$ as 0: $ 0 = \emptyset$.
+  \item 1 is defined as $S(0) = \{ \emptyset \}$.
+  \item 2 as $S(1) = \{ \emptyset, \{ \emptyset \} \}$.
+  \item Continue this process to generate all natural numbers.    
+  \end{enumerate}
+\end{frame}
+\section{Mathematical logic}
+\begin{frame}
+  \frametitle{Logicism}
+  {\large Frege developed predicate logic and employed it and set theory to provide a logical basis for arithmetic.}
+  \begin{columns}
+    \begin{column}{0.8\textwidth}
+      \begin{itemize}
+        \item In "The Foundations of Arithmetic," Frege aimed to show that the truths of arithmetic are derived from logical axioms.
+      \item In "On Sense and Reference," Frege distinguished between sense and reference.
+        \begin{itemize}
+        \item The terms "Morning Star" and "Evening Star" have different senses but share the same reference.
+        % \item This distinction helps explain how different expressions can convey different cognitive values while referring to the same object.
+        \end{itemize}
+      \end{itemize}
+    \end{column}    
+    \begin{column}{0.2\textwidth}
+      \begin{figure}
+        \includegraphics[width=1\textwidth]{images/frege.png}
+      \end{figure}       
+    \end{column} 
+  \end{columns}
+  \blfootnote{Figure adapted from Philosophy for beginners\supercite{philosophy-for-begginers}}
+\end{frame}
 % \begin{frame}
 %   \frametitle{Formalizing Thought with Symbols}
 %   {\large The idea to reduce inference to symbolic manipulation has existed since the 17th century or earlier.}  
