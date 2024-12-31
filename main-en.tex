@@ -165,98 +165,99 @@
   \end{columns}
   \blfootnote{Figure adapted from Philosophy for beginners\supercite{philosophy-for-begginers}}
 \end{frame}
-% \begin{frame}
-%   \frametitle{Formalizing Thought with Symbols}
-%   {\large The idea to reduce inference to symbolic manipulation has existed since the 17th century or earlier.}  
-%   \begin{columns}
-%     \begin{column}{0.55\textwidth}
-%       Those who devised it:
-%       \begin{itemize}
-%         \item Notation for calculus used today
-%         \item The binary number system
-%         \item \textcolor{highlight}{characteristica universalis}
-%           \begin{itemize}
-%           \item A set of symbols for thought analogous to the alphabet for language.
-%           \item Reasoning is done through algebraic operations with symbols.
-%           \end{itemize}
-%       \end{itemize}
-%     \end{column}    
-%     \begin{column}{0.4\textwidth}
-%       \begin{figure}
-%         \includegraphics[width=0.7\linewidth]{images/leibniz.png}
-%         \includegraphics[width=0.7\linewidth]{images/universal.png}
-%       \end{figure}       
-%     \end{column} 
-%   \end{columns}
-%   \blfootnote{Figures from Philosophy for beginners\supercite{philosophy-for-begginers}}  
-% \end{frame}
-% \begin{frame}
-%   \frametitle{Boole's Logical Algebra}
-%   {\large Boole represented the sets of individuals appearing in propositions using symbols.}
-%   \begin{columns}
-%     \begin{column}{0.7\textwidth}
-%       \begin{center}
-%         Quotation from "The Laws of Thought"\supercite{bool}:
-%         \begin{quotation}
-%           Let us then agree to represent \textcolor{highlight}{the class of individuals to which a particular name or description is applicable, by a single letter, as x}. If the name is “men,” for instance, let x represent “all men,”
-%         \end{quotation}
-%       \end{center}
-%     \end{column}    
-%     \begin{column}{0.2\textwidth}
-%       \begin{figure}
-%         \includegraphics[width=1\textwidth]{images/bool.png}
-%       \end{figure}       
-%     \end{column} 
-%   \end{columns}
-%   \blfootnote{Figures from "The Universal Computer: The Road from Leibniz to Turing"}
-% \end{frame}
-% \begin{frame}
-%   \frametitle{Examples of Inference Rules}
-%   {\large Propositional logic is a logical system composed of propositions and logical connectives.}
-%   \par
-%   Inference rules:
-%   \par
-%   \vspace{16pt}
-%   \AxiomC{$\varphi, \psi$}
-%   \RightLabel{(\wedge Introduction)}
-%   \UnaryInfC{$\varphi\wedge\psi$}
-%   \DisplayProof
-%   \AxiomC{$\varphi\wedge\psi$}
-%   \RightLabel{(\vee Elimination)}
-%   \UnaryInfC{$\varphi$}
-%   \DisplayProof
-%   \AxiomC{$\varphi\wedge\psi$}
-%   \RightLabel{(\vee Elimination)}
-%   \UnaryInfC{$\psi$}
-%   \DisplayProof
-%   \AxiomC{$[\varphi]$}
-%   \noLine
-%   \UnaryInfC{$\vdots$}
-%   \noLine
-%   \UnaryInfC{$\psi$}
-%   \RightLabel{(\rightarrow Introduction)}  
-%   \UnaryInfC{$\varphi\rightarrow\psi$}
-%   \DisplayProof
-%   \AxiomC{$\varphi$}
-%   \AxiomC{$\varphi\rightarrow\psi$}
-%   \RightLabel{(\rightarrow Elimination)}  
-%   \BinaryInfC{$\psi$}
-%   \DisplayProof
-%   \AxiomC{$\bot$}
-%   \RightLabel{($\bot$)}
-%   \UnaryInfC{$\varphi$}
-%   \DisplayProof
-%   \AxiomC{$[\neg\varphi]$}
-%   \noLine
-%   \UnaryInfC{$\vdots$}
-%   \noLine
-%   \UnaryInfC{$\bot$}
-%   \RightLabel{(Reductio ad Absurdum)}
-%   \UnaryInfC{$\varphi$}
-%   \DisplayProof
-%   \par
-%   $\varphi$, and $\psi$ are propositions that can take truth values.
-% \end{frame}
+
+\begin{frame}
+  \frametitle{Leibniz's pioneering work in symbolic manipulation}
+  {\large The approach to calculate inference by manipulating symbols was already explored in the 17th century.}  
+  \begin{columns}
+    \begin{column}{0.55\textwidth}
+      {\setlength{\leftmarginii}{16pt}
+      \begin{itemize}
+        \item Calculus derivatives
+        \item The binary number system
+        \item \textcolor{highlight}{characteristica universalis}
+          \begin{itemize}
+          \item a universal system of signs to eliminate the ambiguity of natural nlanguage by developing an alphabet of human thoughts
+          \end{itemize}
+        \end{itemize}
+      }
+    \end{column}    
+    \begin{column}{0.4\textwidth}
+      \begin{figure}
+        \includegraphics[width=0.65\linewidth]{images/leibniz.png}
+        \includegraphics[width=0.65\linewidth]{images/universal.png}
+      \end{figure}
+    \end{column} 
+  \end{columns}
+  \blfootnote{Figures adapted from Philosophy for beginners\supercite{philosophy-for-begginers}}  
+\end{frame}
+\begin{frame}
+  \frametitle{Boole Turned Logic into Algebra}
+  {\large Boole employed symbols to represent classes of individuals in propositions.}
+  \begin{columns}
+    \begin{column}{0.7\textwidth}
+      \begin{center}
+        "The Laws of Thought"\supercite{bool}
+        \begin{quotation}
+          Let us then agree to represent \textcolor{highlight}{the class of individuals to which a particular name or description is applicable, by a single letter, as x}. If the name is “men,” for instance, let x represent “all men,”
+        \end{quotation}
+      \end{center}
+    \end{column}    
+    \begin{column}{0.2\textwidth}
+      \begin{figure}
+        \includegraphics[width=1\textwidth]{images/bool.png}
+      \end{figure}       
+    \end{column} 
+  \end{columns}
+  \blfootnote{Figure adapted from "The Universal Computer: The Road from Leibniz to Turing"}
+\end{frame}
+\begin{frame}
+  \frametitle{Propositional Logic}
+  {\large Propositional logic involves using statements and deducing their truth based on logical connectives.}
+  \par
+  \vspace{16pt}
+  {\small
+  \AxiomC{$\varphi, \psi$}
+  \RightLabel{(\wedge I)}
+  \UnaryInfC{$\varphi\wedge\psi$}
+  \DisplayProof
+  \AxiomC{$\varphi\wedge\psi$}
+  \RightLabel{(\vee E)}
+  \UnaryInfC{$\varphi$}
+  \DisplayProof
+  \AxiomC{$\varphi\wedge\psi$}
+  \RightLabel{(\vee E)}
+  \UnaryInfC{$\psi$}
+  \DisplayProof
+  \AxiomC{$[\varphi]$}
+  \noLine
+  \UnaryInfC{$\vdots$}
+  \noLine
+  \UnaryInfC{$\psi$}
+  \RightLabel{(\rightarrow I)}  
+  \UnaryInfC{$\varphi\rightarrow\psi$}
+  \DisplayProof
+  \AxiomC{$\varphi$}
+  \AxiomC{$\varphi\rightarrow\psi$}
+  \RightLabel{(\rightarrow E)}  
+  \BinaryInfC{$\psi$}
+  \DisplayProof
+  \AxiomC{$\bot$}
+  \RightLabel{($\bot$)}
+  \UnaryInfC{$\varphi$}
+  \DisplayProof
+  \AxiomC{$[\neg\varphi]$}
+  \noLine
+  \UnaryInfC{$\vdots$}
+  \noLine
+  \UnaryInfC{$\bot$}
+  \RightLabel{(RAA)}
+  \UnaryInfC{$\varphi$}
+  \DisplayProof
+  }
+  \par
+  a proposition is a declarative statement that is either true or false but not both.
+\end{frame}
 % \begin{frame}
 %   \frametitle{Conceptual Notation}
 %   {\large Frege formalized statements with predicates.}
